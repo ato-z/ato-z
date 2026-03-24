@@ -173,7 +173,7 @@
 ┃                                                                 ┃
 ┃         ⚔️  想要一起冒险？随时联系我！ ⚔️                       ┃
 ┃                                                                 ┃
-┃    📧 GitHub Profile   │   💬 Open to collaborate               ┃
+┃    📧 az.f0810@gmail.com   │   💬 Open to collaborate           ┃
 ┃                                                                 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
