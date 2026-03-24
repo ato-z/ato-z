@@ -51,8 +51,11 @@
 |:------:|:--------:|
 | Web Full-Stack | <img src="https://img.shields.io/badge/-Web-c9a227?style=for-the-badge&logo=globe&logoColor=0f0f1a" width="100"> |
 | React | <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=0f0f1a" width="90"> |
+| Next.js | <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=f0e6d3" width="90"> |
 | Vue | <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=0f0f1a" width="85"> |
 | TypeScript | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=f0e6d3" width="110"> |
+| NestJS | <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" width="95"> |
+| Koa | <img src="https://img.shields.io/badge/Koa-33333D?style=for-the-badge&logo=koa&logoColor=f0e6d3" width="80"> |
 | WeChat MiniApp | <img src="https://img.shields.io/badge/-MiniApp-07C160?style=for-the-badge&logo=wechat&logoColor=white" width="110"> |
 | Cloudflare | <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=0f0f1a" width="110"> |
 | CI/CD | <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-c9a227?style=for-the-badge&logo=github-actions&logoColor=0f0f1a" width="100"> |
