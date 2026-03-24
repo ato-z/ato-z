@@ -1,192 +1,236 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
   <style>
     @keyframes twinkle {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.2; }
     }
     @keyframes shoot {
-      0% { transform: translateX(0) translateY(0); opacity: 0; }
+      0% { transform: translate(0,0); opacity: 0; }
       5% { opacity: 1; }
       95% { opacity: 1; }
-      100% { transform: translateX(180px) translateY(90px); opacity: 0; }
+      100% { transform: translate(120px, 60px); opacity: 0; }
     }
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
     }
     @keyframes glow {
-      0%, 100% { opacity: 0.6; }
+      0%, 100% { opacity: 0.5; }
       50% { opacity: 1; }
     }
     @keyframes aurora {
-      0%, 100% { transform: translateX(0) scaleY(1); opacity: 0.25; }
-      50% { transform: translateX(30px) scaleY(1.3); opacity: 0.45; }
-    }
-    @keyframes aurora2 {
-      0%, 100% { transform: translateX(0) scaleY(1); opacity: 0.2; }
-      50% { transform: translateX(-25px) scaleY(1.4); opacity: 0.4; }
-    }
-    @keyframes cloud {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(20px); }
+      0%, 100% { transform: translateX(0px); opacity: 0.3; }
+      50% { transform: translateX(10px); opacity: 0.6; }
     }
     
-    .star { animation: twinkle 2s ease-in-out infinite; }
-    .star:nth-child(1) { animation-delay: 0s; }
-    .star:nth-child(2) { animation-delay: 0.2s; }
-    .star:nth-child(3) { animation-delay: 0.4s; }
-    .star:nth-child(4) { animation-delay: 0.6s; }
-    .star:nth-child(5) { animation-delay: 0.8s; }
-    .star:nth-child(6) { animation-delay: 1s; }
-    .star:nth-child(7) { animation-delay: 1.2s; }
-    .star:nth-child(8) { animation-delay: 1.4s; }
-    .star:nth-child(9) { animation-delay: 0.3s; }
-    .star:nth-child(10) { animation-delay: 0.7s; }
+    .star { animation: twinkle 1.5s ease-in-out infinite; fill: #fff8e7; }
+    .s { animation-delay: 0s; }
+    .s2 { animation-delay: 0.2s; }
+    .s3 { animation-delay: 0.4s; }
+    .s4 { animation-delay: 0.6s; }
+    .s5 { animation-delay: 0.8s; }
+    .s6 { animation-delay: 1s; }
+    .s7 { animation-delay: 0.3s; }
+    .s8 { animation-delay: 0.7s; }
     
-    .shooting { animation: shoot 10s ease-in-out infinite; }
+    .shooting { animation: shoot 12s ease-in-out infinite; }
     
-    .mountain-far { animation: float 8s ease-in-out infinite; }
-    .mountain-mid { animation: float 6s ease-in-out infinite 1s; }
-    .mountain-near { animation: float 5s ease-in-out infinite 2s; }
+    .mt-far { animation: float 7s ease-in-out infinite; }
+    .mt-mid { animation: float 5s ease-in-out infinite 0.5s; }
+    .mt-near { animation: float 4s ease-in-out infinite 1s; }
     
-    .aurora { animation: aurora 10s ease-in-out infinite; }
-    .aurora2 { animation: aurora2 12s ease-in-out infinite 2s; }
-    
-    .cloud { animation: cloud 20s ease-in-out infinite alternate; }
+    .aurora { animation: aurora 8s ease-in-out infinite; }
+    .glow { animation: glow 3s ease-in-out infinite; }
   </style>
   
-  <defs>
-    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a0a1a"/>
-      <stop offset="30%" stop-color="#15152a"/>
-      <stop offset="60%" stop-color="#1a1a3a"/>
-      <stop offset="100%" stop-color="#251535"/>
-    </linearGradient>
-    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e7" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#fff8e7" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="auroraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.4"/>
-      <stop offset="30%" stop-color="#00ffcc" stop-opacity="0.5"/>
-      <stop offset="60%" stop-color="#00ccff" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#8866ff" stop-opacity="0.3"/>
-    </linearGradient>
-    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2a1a4a"/>
-      <stop offset="100%" stop-color="#1a0a2a"/>
-    </linearGradient>
-  </defs>
+  <!-- Sky (pixel blocks) -->
+  <rect width="320" height="160" fill="#0a0a1a"/>
   
-  <!-- Sky -->
-  <rect width="400" height="200" fill="url(#sky)"/>
-  
-  <!-- Stars -->
-  <g fill="#fff8e7">
-    <rect class="star" x="15" y="12" width="2" height="2"/>
-    <rect class="star" x="45" y="28" width="3" height="3"/>
-    <rect class="star" x="85" y="8" width="2" height="2"/>
-    <rect class="star" x="115" y="22" width="2" height="2"/>
-    <rect class="star" x="155" y="5" width="3" height="3"/>
-    <rect class="star" x="195" y="18" width="2" height="2"/>
-    <rect class="star" x="235" y="10" width="2" height="2"/>
-    <rect class="star" x="275" y="25" width="3" height="3"/>
-    <rect class="star" x="315" y="3" width="2" height="2"/>
-    <rect class="star" x="355" y="15" width="2" height="2"/>
-    <rect class="star" x="380" y="32" width="3" height="3"/>
-    <rect class="star" x="30" y="42" width="2" height="2"/>
-    <rect class="star" x="70" y="48" width="2" height="2"/>
-    <rect class="star" x="140" y="38" width="3" height="3"/>
-    <rect class="star" x="215" y="32" width="2" height="2"/>
-    <rect class="star" x="295" y="42" width="2" height="2"/>
-    <rect class="star" x="345" y="28" width="2" height="2"/>
-    <rect class="star" x="8" y="58" width="2" height="2"/>
-    <rect class="star" x="125" y="52" width="2" height="2"/>
-    <rect class="star" x="255" y="48" width="3" height="3"/>
-    <rect class="star" x="335" y="52" width="2" height="2"/>
-    <rect class="star" x="388" y="42" width="2" height="2"/>
-    <rect class="star" x="60" y="35" width="2" height="2"/>
-    <rect class="star" x="180" y="45" width="2" height="2"/>
-    <rect class="star" x="260" y="38" width="2" height="2"/>
-    <rect class="star" x="370" y="50" width="2" height="2"/>
+  <!-- Pixel stars -->
+  <g>
+    <rect class="star s" x="12" y="10" width="2" height="2"/>
+    <rect class="star s2" x="35" y="22" width="2" height="2"/>
+    <rect class="star s3" x="68" y="8" width="2" height="2"/>
+    <rect class="star s4" x="92" y="18" width="2" height="2"/>
+    <rect class="star s5" x="125" y="5" width="2" height="2"/>
+    <rect class="star s6" x="158" y="15" width="2" height="2"/>
+    <rect class="star s7" x="192" y="8" width="2" height="2"/>
+    <rect class="star s8" x="225" y="22" width="2" height="2"/>
+    <rect class="star s" x="258" y="3" width="2" height="2"/>
+    <rect class="star s2" x="292" y="12" width="2" height="2"/>
+    <rect class="star s3" x="308" y="28" width="2" height="2"/>
+    <rect class="star s4" x="25" y="35" width="2" height="2"/>
+    <rect class="star s5" x="58" y="40" width="2" height="2"/>
+    <rect class="star s6" x="115" y="32" width="2" height="2"/>
+    <rect class="star s7" x="175" y="28" width="2" height="2"/>
+    <rect class="star s8" x="242" y="35" width="2" height="2"/>
+    <rect class="star s" x="282" y="40" width="2" height="2"/>
+    <rect class="star s2" x="8" y="50" width="2" height="2"/>
+    <rect class="star s3" x="105" y="45" width="2" height="2"/>
+    <rect class="star s4" x="208" y="42" width="2" height="2"/>
+    <rect class="star s5" x="275" y="48" width="2" height="2"/>
   </g>
   
-  <!-- Moon glow -->
-  <circle cx="340" cy="45" r="30" fill="url(#moonGlow)"/>
-  <!-- Moon -->
-  <circle cx="340" cy="45" r="18" fill="#fff8e7"/>
-  <circle cx="334" cy="40" r="4" fill="#e8e0d0"/>
-  <circle cx="344" cy="48" r="3" fill="#e8e0d0"/>
-  <circle cx="337" cy="52" r="2" fill="#e8e0d0"/>
-  
-  <!-- Aurora 1 -->
-  <g class="aurora">
-    <ellipse cx="180" cy="70" rx="200" ry="40" fill="url(#auroraGrad)"/>
+  <!-- Moon (pixelated) -->
+  <g class="glow">
+    <rect x="260" y="20" width="4" height="2" fill="#fff8e7"/>
+    <rect x="264" y="18" width="12" height="2" fill="#fff8e7"/>
+    <rect x="276" y="20" width="4" height="2" fill="#fff8e7"/>
+    <rect x="262" y="22" width="16" height="2" fill="#fff8e7"/>
+    <rect x="262" y="24" width="4" height="2" fill="#fff8e7"/>
+    <rect x="274" y="24" width="4" height="2" fill="#fff8e7"/>
+    <rect x="264" y="26" width="12" height="2" fill="#fff8e7"/>
+    <rect x="266" y="28" width="8" height="2" fill="#fff8e7"/>
   </g>
   
-  <!-- Aurora 2 -->
-  <g class="aurora2">
-    <ellipse cx="220" cy="85" rx="180" ry="35" fill="url(#auroraGrad)"/>
+  <!-- Aurora (pixelated bands) -->
+  <g class="aurora" opacity="0.4">
+    <rect x="0" y="45" width="320" height="4" fill="#00ff88"/>
+    <rect x="0" y="50" width="320" height="4" fill="#00ffcc"/>
+    <rect x="0" y="55" width="320" height="4" fill="#00ccff"/>
+    <rect x="0" y="60" width="320" height="4" fill="#8866ff"/>
   </g>
   
-  <!-- Clouds -->
-  <g class="cloud" fill="#3a2a5a" opacity="0.6">
-    <ellipse cx="50" cy="55" rx="40" ry="12"/>
-    <ellipse cx="80" cy="52" rx="30" ry="10"/>
-    <ellipse cx="30" cy="58" rx="25" ry="8"/>
-  </g>
-  <g class="cloud" fill="#2a1a4a" opacity="0.5" style="animation-delay: 5s;">
-    <ellipse cx="320" cy="60" rx="45" ry="14"/>
-    <ellipse cx="355" cy="57" rx="35" ry="11"/>
-    <ellipse cx="290" cy="62" rx="28" ry="9"/>
-  </g>
-  
-  <!-- Far mountains -->
-  <g class="mountain-far" fill="#2a1a4a">
-    <polygon points="0,200 40,120 80,200"/>
-    <polygon points="50,200 110,100 170,200"/>
-    <polygon points="140,200 200,90 260,200"/>
-    <polygon points="230,200 300,105 370,200"/>
-    <polygon points="330,200 380,115 400,200"/>
+  <!-- Far mountains (pixelated) -->
+  <g class="mt-far" fill="#2a1a4a">
+    <rect x="0" y="100" width="8" height="60"/>
+    <rect x="8" y="95" width="8" height="65"/>
+    <rect x="16" y="90" width="8" height="70"/>
+    <rect x="24" y="85" width="8" height="75"/>
+    <rect x="32" y="90" width="8" height="70"/>
+    <rect x="40" y="95" width="8" height="65"/>
+    <rect x="48" y="100" width="8" height="60"/>
+    
+    <rect x="80" y="95" width="8" height="65"/>
+    <rect x="88" y="88" width="8" height="72"/>
+    <rect x="96" y="80" width="8" height="80"/>
+    <rect x="104" y="72" width="8" height="88"/>
+    <rect x="112" y="80" width="8" height="80"/>
+    <rect x="120" y="88" width="8" height="72"/>
+    <rect x="128" y="95" width="8" height="65"/>
+    
+    <rect x="160" y="90" width="8" height="70"/>
+    <rect x="168" y="82" width="8" height="78"/>
+    <rect x="176" y="74" width="8" height="86"/>
+    <rect x="184" y="66" width="8" height="94"/>
+    <rect x="192" y="74" width="8" height="86"/>
+    <rect x="200" y="82" width="8" height="78"/>
+    <rect x="208" y="90" width="8" height="70"/>
+    
+    <rect x="240" y="95" width="8" height="65"/>
+    <rect x="248" y="85" width="8" height="75"/>
+    <rect x="256" y="78" width="8" height="82"/>
+    <rect x="264" y="72" width="8" height="88"/>
+    <rect x="272" y="78" width="8" height="82"/>
+    <rect x="280" y="85" width="8" height="75"/>
+    <rect x="288" y="92" width="8" height="68"/>
+    
+    <rect x="305" y="98" width="8" height="62"/>
+    <rect x="313" y="92" width="8" height="68"/>
   </g>
   
   <!-- Mid mountains -->
-  <g class="mountain-mid" fill="#1f0f2f">
-    <polygon points="0,200 60,140 120,200"/>
-    <polygon points="80,200 160,115 240,200"/>
-    <polygon points="180,200 270,125 360,200"/>
-    <polygon points="280,200 350,140 400,200"/>
+  <g class="mt-mid" fill="#1a0f2a">
+    <rect x="0" y="115" width="8" height="45"/>
+    <rect x="8" y="110" width="8" height="50"/>
+    <rect x="16" y="105" width="8" height="55"/>
+    <rect x="24" y="100" width="8" height="60"/>
+    <rect x="32" y="105" width="8" height="55"/>
+    <rect x="40" y="110" width="8" height="50"/>
+    
+    <rect x="70" y="108" width="8" height="52"/>
+    <rect x="78" y="100" width="8" height="60"/>
+    <rect x="86" y="92" width="8" height="68"/>
+    <rect x="94" y="85" width="8" height="75"/>
+    <rect x="102" y="92" width="8" height="68"/>
+    <rect x="110" y="100" width="8" height="60"/>
+    <rect x="118" y="108" width="8" height="52"/>
+    
+    <rect x="150" y="105" width="8" height="55"/>
+    <rect x="158" y="96" width="8" height="64"/>
+    <rect x="166" y="88" width="8" height="72"/>
+    <rect x="174" y="80" width="8" height="80"/>
+    <rect x="182" y="88" width="8" height="72"/>
+    <rect x="190" y="96" width="8" height="64"/>
+    <rect x="198" y="105" width="8" height="55"/>
+    
+    <rect x="230" y="110" width="8" height="50"/>
+    <rect x="238" y="102" width="8" height="58"/>
+    <rect x="246" y="95" width="8" height="65"/>
+    <rect x="254" y="88" width="8" height="72"/>
+    <rect x="262" y="95" width="8" height="65"/>
+    <rect x="270" y="102" width="8" height="58"/>
+    <rect x="278" y="110" width="8" height="50"/>
+    
+    <rect x="305" y="115" width="8" height="45"/>
+    <rect x="313" y="108" width="8" height="52"/>
   </g>
   
   <!-- Near mountains -->
-  <g class="mountain-near" fill="#15082a">
-    <polygon points="0,200 40,160 80,200"/>
-    <polygon points="50,200 120,145 190,200"/>
-    <polygon points="150,200 240,135 330,200"/>
-    <polygon points="260,200 340,150 400,200"/>
+  <g class="mt-near" fill="#10082a">
+    <rect x="0" y="130" width="8" height="30"/>
+    <rect x="8" y="125" width="8" height="35"/>
+    <rect x="16" y="120" width="8" height="40"/>
+    <rect x="24" y="125" width="8" height="35"/>
+    <rect x="32" y="130" width="8" height="30"/>
+    
+    <rect x="60" y="128" width="8" height="32"/>
+    <rect x="68" y="120" width="8" height="40"/>
+    <rect x="76" y="112" width="8" height="48"/>
+    <rect x="84" y="118" width="8" height="42"/>
+    <rect x="92" y="125" width="8" height="35"/>
+    <rect x="100" y="130" width="8" height="30"/>
+    
+    <rect x="130" y="125" width="8" height="35"/>
+    <rect x="138" y="115" width="8" height="45"/>
+    <rect x="146" y="105" width="8" height="55"/>
+    <rect x="154" y="112" width="8" height="48"/>
+    <rect x="162" y="120" width="8" height="40"/>
+    <rect x="170" y="128" width="8" height="32"/>
+    
+    <rect x="200" y="130" width="8" height="30"/>
+    <rect x="208" y="122" width="8" height="38"/>
+    <rect x="216" y="115" width="8" height="45"/>
+    <rect x="224" y="122" width="8" height="38"/>
+    <rect x="232" y="128" width="8" height="32"/>
+    
+    <rect x="260" y="125" width="8" height="35"/>
+    <rect x="268" y="118" width="8" height="42"/>
+    <rect x="276" y="112" width="8" height="48"/>
+    <rect x="284" y="118" width="8" height="42"/>
+    <rect x="292" y="125" width="8" height="35"/>
+    
+    <rect x="310" y="130" width="8" height="30"/>
   </g>
   
-  <!-- Trees silhouette -->
-  <g fill="#0a0515">
-    <polygon points="10,200 15,170 20,200"/>
-    <polygon points="18,200 25,165 32,200"/>
-    <polygon points="28,200 33,175 38,200"/>
-    <polygon points="360,200 367,168 374,200"/>
-    <polygon points="372,200 380,160 388,200"/>
-    <polygon points="385,200 390,172 395,200"/>
+  <!-- Trees (pixelated) -->
+  <g fill="#080518">
+    <rect x="15" y="142" width="4" height="18"/>
+    <rect x="11" y="138" width="4" height="6"/>
+    <rect x="17" y="135" width="4" height="8"/>
+    
+    <rect x="30" y="145" width="4" height="15"/>
+    <rect x="26" y="140" width="4" height="6"/>
+    
+    <rect x="288" y="140" width="4" height="20"/>
+    <rect x="284" y="136" width="4" height="6"/>
+    <rect x="290" y="132" width="4" height="8"/>
+    <rect x="296" y="136" width="4" height="6"/>
+    
+    <rect x="302" y="145" width="4" height="15"/>
+    <rect x="298" y="140" width="4" height="6"/>
+    <rect x="306" y="142" width="4" height="4"/>
   </g>
   
-  <!-- Ground -->
-  <rect x="0" y="190" width="400" height="10" fill="#0a0515"/>
+  <!-- Ground (pixelated) -->
+  <rect x="0" y="152" width="320" height="8" fill="#080518"/>
+  <rect x="0" y="150" width="320" height="2" fill="#1a0f2a"/>
   
   <!-- Shooting stars -->
-  <g class="shooting" style="animation-delay: 1s;">
-    <rect x="80" y="35" width="25" height="2" fill="#fff8e7" transform="rotate(-28, 80, 35)"/>
+  <g class="shooting" style="animation-delay: 2s;">
+    <rect x="100" y="30" width="12" height="2" fill="#fff8e7"/>
   </g>
-  <g class="shooting" style="animation-delay: 5s;">
-    <rect x="150" y="25" width="20" height="2" fill="#c9a227" transform="rotate(-32, 150, 25)"/>
-  </g>
-  <g class="shooting" style="animation-delay: 8s;">
-    <rect x="50" y="45" width="18" height="2" fill="#fff8e7" transform="rotate(-25, 50, 45)"/>
+  <g class="shooting" style="animation-delay: 7s;">
+    <rect x="60" y="40" width="10" height="2" fill="#c9a227"/>
   </g>
 </svg>

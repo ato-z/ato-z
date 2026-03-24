@@ -1,11 +1,27 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+  font-family: 'VT323', monospace !important;
+  font-size: 18px !important;
+}
+h1, h2, h3, h4 {
+  font-family: 'VT323', monospace !important;
+}
+table {
+  font-family: 'VT323', monospace !important;
+}
+</style>
+
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/landscape.svg" alt="landscape" width="350"/>
 </h1>
 
-<h3 align="center">Full-Stack Developer</h3>
+<h3 align="center" style="font-family:'VT323',monospace;color:#c9a227;font-size:28px;">
+  Full-Stack Developer
+</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=VT323&size=18&pause=800&color=c9a227&center=true&vCenter=true&lines=React+%E2%9A%94%EF%B8%8F+Vue+%E2%9A%94%EF%B8%8F+TypeScript;Next.js+%E2%9A%94%EF%B8%8F+NestJS+%E2%9A%94%EF%B8%8F+Koa;WeChat+MiniApp+%E2%9A%94%EF%B8%8F+Cloudflare" width="400"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=VT323&size=20&pause=800&color=c9a227&center=true&vCenter=true&lines=React+%E2%9A%94%EF%B8%8F+Vue+%E2%9A%94%EF%B8%8F+TypeScript;Next.js+%E2%9A%94%EF%B8%8F+NestJS+%E2%9A%94%EF%B8%8F+Koa;WeChat+MiniApp+%E2%9A%94%EF%B8%8F+Cloudflare" width="420"/>
 </p>
 
 ---
@@ -89,17 +105,17 @@
         <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/knight.svg" width="40"/>
       </td>
       <td colspan="2" width="250">
-        <b style="color:#c9a227">[MESSAGE]</b>
+        <b style="color:#c9a227;font-family:'VT323',monospace;font-size:20px;">[MESSAGE]</b>
       </td>
     </tr>
     <tr>
-      <td colspan="2" height="60" valign="top" style="color:#f0e6d3;">
+      <td colspan="2" height="60" valign="top" style="color:#f0e6d3;font-family:'VT323',monospace;font-size:18px;">
         <b>"Want to adventure together?</b><br/>
         <b>Let's build something great!"</b>
       </td>
     </tr>
     <tr>
-      <td width="120" style="color:#f0e6d3;">
+      <td width="120" style="color:#f0e6d3;font-family:'VT323',monospace;font-size:16px;">
         <b>az.f0810@gmail.com</b>
       </td>
       <td width="130" align="right">
@@ -122,7 +138,7 @@
   <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/landscape.svg" alt="landscape" width="100%"/>
 </p>
 
-<p align="center">
+<p align="center" style="font-family:'VT323',monospace;color:#c9a227;font-size:20px;">
   <em>Thank you for visiting. Happy coding.</em><br/>
   <em>"Every commit is a new beginning"</em>
 </p>
