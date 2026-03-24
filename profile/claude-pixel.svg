@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64">
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(0.95); }
+    }
+    @keyframes think {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-2px) rotate(-5deg); }
+      75% { transform: translateY(-2px) rotate(5deg); }
+    }
+    .brain { animation: pulse 2s ease-in-out infinite; }
+    .spark { animation: think 1.5s ease-in-out infinite; }
+  </style>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="32" height="32" fill="#1a1a2e"/>
+  
+  <!-- Claude logo simplified pixel art -->
+  <g class="brain">
+    <!-- C shape -->
+    <rect x="8" y="6" width="4" height="4" fill="#7c3aed"/>
+    <rect x="6" y="10" width="4" height="4" fill="#7c3aed"/>
+    <rect x="6" y="14" width="4" height="4" fill="#7c3aed"/>
+    <rect x="6" y="18" width="4" height="4" fill="#7c3aed"/>
+    <rect x="8" y="22" width="4" height="4" fill="#7c3aed"/>
+  </g>
+  
+  <!-- L shape -->
+  <g>
+    <rect x="14" y="6" width="4" height="4" fill="#a78bfa"/>
+    <rect x="14" y="10" width="4" height="4" fill="#a78bfa"/>
+    <rect x="14" y="14" width="4" height="4" fill="#a78bfa"/>
+    <rect x="14" y="18" width="4" height="4" fill="#a78bfa"/>
+    <rect x="18" y="18" width="4" height="4" fill="#a78bfa"/>
+    <rect x="22" y="18" width="4" height="4" fill="#a78bfa"/>
+  </g>
+  
+  <!-- Sparkle -->
+  <g class="spark">
+    <rect x="24" y="4" width="3" height="3" fill="#f0e6d3"/>
+    <rect x="26" y="6" width="3" height="3" fill="#f0e6d3"/>
+    <rect x="24" y="8" width="3" height="3" fill="#f0e6d3"/>
+    <rect x="26" y="10" width="3" height="3" fill="#f0e6d3"/>
+  </g>
+</svg>

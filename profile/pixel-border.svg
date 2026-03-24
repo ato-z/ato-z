@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 20" preserveAspectRatio="none">
+  <style>
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes march {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(20px); }
+    }
+    .dot { animation: sparkle 1s ease-in-out infinite; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    .dot:nth-child(4) { animation-delay: 0.6s; }
+    .dot:nth-child(5) { animation-delay: 0.8s; }
+    .march { animation: march 2s linear infinite; }
+  </style>
+  
+  <!-- Top border line -->
+  <rect x="0" y="8" width="600" height="4" fill="#c9a227"/>
+  
+  <!-- Corner decorations -->
+  <rect x="0" y="0" width="8" height="8" fill="#d4a574"/>
+  <rect x="592" y="0" width="8" height="8" fill="#d4a574"/>
+  <rect x="0" y="12" width="8" height="8" fill="#d4a574"/>
+  <rect x="592" y="12" width="8" height="8" fill="#d4a574"/>
+  
+  <!-- Sparkle dots -->
+  <g class="march">
+    <circle class="dot" cx="40" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="120" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="200" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="280" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="360" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="440" cy="10" r="3" fill="#f0e6d3"/>
+    <circle class="dot" cx="520" cy="10" r="3" fill="#f0e6d3"/>
+  </g>
+  
+  <!-- Star decorations -->
+  <g class="dot">
+    <polygon points="80,10 82,6 84,10 88,10 85,12 86,16 82,14 78,16 79,12 76,10" fill="#f0e6d3"/>
+  </g>
+  <g class="dot" style="animation-delay: 0.5s">
+    <polygon points="300,10 302,6 304,10 308,10 305,12 306,16 302,14 298,16 299,12 296,10" fill="#f0e6d3"/>
+  </g>
+  <g class="dot" style="animation-delay: 1s">
+    <polygon points="520,10 522,6 524,10 528,10 525,12 526,16 522,14 518,16 519,12 516,10" fill="#f0e6d3"/>
+  </g>
+</svg>
