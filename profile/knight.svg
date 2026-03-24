@@ -4,30 +4,27 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
     }
-    @keyframes glow {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
+    @keyframes eyeGlow {
+      0%, 100% { fill: #c9a227; filter: drop-shadow(0 0 2px #c9a227); }
+      50% { fill: #f0e6d3; filter: drop-shadow(0 0 6px #f0e6d3); }
     }
-    @keyframes glint {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
+    @keyframes gemPulse {
+      0%, 100% { fill: #c9a227; }
+      50% { fill: #f0e6d3; }
     }
     @keyframes capeSway {
       0%, 100% { transform: skewX(0deg); }
       50% { transform: skewX(3deg); }
     }
-    @keyframes eyeGlow {
-      0%, 100% { fill: #c9a227; filter: drop-shadow(0 0 2px #c9a227); }
-      50% { fill: #f0e6d3; filter: drop-shadow(0 0 6px #f0e6d3); }
+    @keyframes particleFloat {
+      0% { opacity: 0; transform: translateY(0) translateX(0) scale(0.3); }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-50px) translateX(20px) scale(0.8); }
     }
-    @keyframes floatParticle {
-      0% { opacity: 0; transform: translateY(0) translateX(0) scale(0.5); }
-      30% { opacity: 1; }
-      100% { opacity: 0; transform: translateY(-40px) translateX(15px) scale(1); }
-    }
-    @keyframes gemPulse {
-      0%, 100% { fill: #c9a227; }
-      50% { fill: #f0e6d3; }
+    @keyframes particleSparkle {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
     }
     @keyframes shieldShift {
       0%, 100% { transform: translateX(0); }
@@ -37,28 +34,48 @@
       0%, 100% { transform: rotate(0deg) translateY(0); }
       50% { transform: rotate(-3deg) translateY(-2px); }
     }
+    @keyframes ambientGlow {
+      0%, 100% { opacity: 0.05; }
+      50% { opacity: 0.12; }
+    }
     
     .knight { animation: idle 2s ease-in-out infinite; }
     .eye { animation: eyeGlow 2.5s ease-in-out infinite; }
     .gem { animation: gemPulse 3s ease-in-out infinite; }
     .cape { animation: capeSway 2.5s ease-in-out infinite; transform-origin: 40px 28px; }
-    .particle { animation: floatParticle 3s ease-out infinite; }
-    .particle:nth-of-type(2) { animation-delay: 0.8s; }
-    .particle:nth-of-type(3) { animation-delay: 1.6s; }
-    .particle:nth-of-type(4) { animation-delay: 2.4s; }
     .shield { animation: shieldShift 3s ease-in-out infinite; }
     .sword { animation: swordFloat 3s ease-in-out infinite; transform-origin: 48px 36px; }
-    .ambient { animation: glow 4s ease-in-out infinite; }
+    .ambient { animation: ambientGlow 4s ease-in-out infinite; }
+    
+    /* Particles */
+    .p1 { animation: particleFloat 4s ease-out infinite; }
+    .p2 { animation: particleFloat 4s ease-out infinite 1s; }
+    .p3 { animation: particleFloat 4s ease-out infinite 2s; }
+    .p4 { animation: particleFloat 4s ease-out infinite 0.5s; }
+    .p5 { animation: particleFloat 4s ease-out infinite 1.5s; }
+    .p6 { animation: particleFloat 4s ease-out infinite 2.5s; }
+    .p7 { animation: particleSparkle 2s ease-in-out infinite; }
+    .p8 { animation: particleSparkle 2s ease-in-out infinite 0.7s; }
+    .p9 { animation: particleSparkle 2s ease-in-out infinite 1.4s; }
   </style>
   
   <!-- Ambient glow behind knight -->
-  <ellipse cx="40" cy="60" rx="38" ry="55" fill="#c9a227" opacity="0.08" class="ambient"/>
+  <ellipse cx="40" cy="60" rx="38" ry="55" fill="#c9a227" class="ambient"/>
   
-  <!-- Floating particles -->
-  <rect class="particle" x="15" y="80" width="3" height="3" fill="#c9a227" rx="1"/>
-  <rect class="particle" x="62" y="75" width="2" height="2" fill="#f0e6d3" rx="1"/>
-  <rect class="particle" x="30" y="90" width="2" height="2" fill="#d4a574" rx="1"/>
-  <rect class="particle" x="55" y="85" width="3" height="3" fill="#c9a227" rx="1"/>
+  <!-- Floating particles - gold -->
+  <rect class="p1" x="10" y="85" width="3" height="3" fill="#c9a227" rx="1"/>
+  <rect class="p4" x="65" y="80" width="4" height="4" fill="#c9a227" rx="1"/>
+  <rect class="p7" x="25" y="70" width="2" height="2" fill="#c9a227"/>
+  <rect class="p8" x="55" y="65" width="3" height="3" fill="#c9a227"/>
+  
+  <!-- Floating particles - white/cream -->
+  <rect class="p2" x="18" y="90" width="2" height="2" fill="#f0e6d3" rx="1"/>
+  <rect class="p5" x="60" y="88" width="3" height="3" fill="#f0e6d3" rx="1"/>
+  <rect class="p9" x="40" y="75" width="2" height="2" fill="#f0e6d3"/>
+  
+  <!-- Floating particles - accent -->
+  <rect class="p3" x="35" y="95" width="2" height="2" fill="#d4a574" rx="1"/>
+  <rect class="p6" x="50" y="92" width="2" height="2" fill="#d4a574" rx="1"/>
   
   <g class="knight">
     <!-- Cape -->
@@ -74,7 +91,7 @@
     <rect x="22" y="6" width="36" height="8" fill="#d4a574"/>
     <rect x="22" y="12" width="36" height="12" fill="#d4a574"/>
     
-    <!-- Eyes (glowing visor) -->
+    <!-- Eyes -->
     <rect x="26" y="16" width="10" height="4" fill="#1a1a2e"/>
     <rect x="44" y="16" width="10" height="4" fill="#1a1a2e"/>
     <rect class="eye" x="27" y="17" width="8" height="2" fill="#c9a227"/>
