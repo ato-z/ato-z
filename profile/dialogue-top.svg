@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 24" width="300" height="24">
+  <!-- Top border -->
+  <rect x="0" y="0" width="300" height="4" fill="#c9a227"/>
+  <rect x="0" y="6" width="300" height="2" fill="#d4a574"/>
+  
+  <!-- Corner decorations -->
+  <rect x="0" y="10" width="8" height="14" fill="#c9a227"/>
+  <rect x="292" y="10" width="8" height="14" fill="#c9a227"/>
+  <rect x="2" y="10" width="4" height="4" fill="#d4a574"/>
+  <rect x="294" y="10" width="4" height="4" fill="#d4a574"/>
+  
+  <!-- Inner frame -->
+  <rect x="10" y="10" width="280" height="14" fill="#1a1a2e"/>
+  <rect x="12" y="12" width="276" height="10" fill="#0f0f1a"/>
+  
+  <!-- Title bar -->
+  <rect x="10" y="10" width="280" height="3" fill="#c9a227"/>
+  
+  <!-- Window buttons -->
+  <rect x="14" y="11" width="2" height="1" fill="#8b1a1a"/>
+  <rect x="18" y="11" width="2" height="1" fill="#3d2914"/>
+  <rect x="22" y="11" width="2" height="1" fill="#3d2914"/>
+</svg>
