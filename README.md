@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/knight.svg" alt="knight" width="120"/>
+  <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/landscape.svg" alt="landscape" width="350"/>
 </h1>
 
 <h3 align="center">Full-Stack Developer</h3>
@@ -119,7 +119,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/knight.svg" alt="knight" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ato-z/ato-z/master/profile/landscape.svg" alt="landscape" width="100%"/>
 </p>
 
 <p align="center">
