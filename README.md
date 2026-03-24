@@ -56,13 +56,13 @@
 ## Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ato-z&theme=tokyonight&border_color=c9a227&bg_color=0f0f1a&title_color=c9a227&text_color=f0e6d3&icon_color=c9a227&include_all_commits=true" height="155"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ato-z&layout=compact&theme=tokyonight&border_color=c9a227&bg_color=0f0f1a&title_color=c9a227&text_color=f0e6d3" height="155"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=ato-z&theme=shadow_blue&border_color=c9a227&bg_color=0f0f1a&title_color=c9a227&text_color=f0e6d3&icon_color=c9a227&include_all_commits=true" height="155"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ato-z&layout=compact&theme=shadow_blue&border_color=c9a227&bg_color=0f0f1a&title_color=c9a227&text_color=f0e6d3" height="155"/>
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=ato-z&color=c9a227&style=flat-square&label=VISITORS"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?username=ato-z&theme=tokyonight&border=c9a227&ring=c9a227&fire=c9a227&currStreakLabel=c9a227&sideNums=c9a227&background=0f0f1a"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?username=ato-z&theme=shadow_blue&border=c9a227&ring=c9a227&fire=c9a227&currStreakLabel=c9a227&sideNums=c9a227&background=0f0f1a"/>
 </p>
 
 ---
