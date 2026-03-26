@@ -1,236 +1,213 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
   <style>
+    @keyframes sway {
+      0%, 100% { transform: rotate(-1deg); }
+      50% { transform: rotate(1deg); }
+    }
+    @keyframes sway-alt {
+      0%, 100% { transform: rotate(1deg); }
+      50% { transform: rotate(-1deg); }
+    }
     @keyframes twinkle {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.2; }
-    }
-    @keyframes shoot {
-      0% { transform: translate(0,0); opacity: 0; }
-      5% { opacity: 1; }
-      95% { opacity: 1; }
-      100% { transform: translate(120px, 60px); opacity: 0; }
+      50% { opacity: 0.3; }
     }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-4px); }
-    }
-    @keyframes glow {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
-    }
-    @keyframes aurora {
-      0%, 100% { transform: translateX(0px); opacity: 0.3; }
-      50% { transform: translateX(10px); opacity: 0.6; }
+      50% { transform: translateY(-2px); }
     }
     
-    .star { animation: twinkle 1.5s ease-in-out infinite; fill: #fff8e7; }
-    .s { animation-delay: 0s; }
-    .s2 { animation-delay: 0.2s; }
-    .s3 { animation-delay: 0.4s; }
-    .s4 { animation-delay: 0.6s; }
-    .s5 { animation-delay: 0.8s; }
-    .s6 { animation-delay: 1s; }
-    .s7 { animation-delay: 0.3s; }
-    .s8 { animation-delay: 0.7s; }
-    
-    .shooting { animation: shoot 12s ease-in-out infinite; }
-    
-    .mt-far { animation: float 7s ease-in-out infinite; }
-    .mt-mid { animation: float 5s ease-in-out infinite 0.5s; }
-    .mt-near { animation: float 4s ease-in-out infinite 1s; }
-    
-    .aurora { animation: aurora 8s ease-in-out infinite; }
-    .glow { animation: glow 3s ease-in-out infinite; }
+    .tree-l { transform-origin: bottom center; animation: sway 4s ease-in-out infinite; }
+    .tree-r { transform-origin: bottom center; animation: sway-alt 4.5s ease-in-out infinite; }
+    .tree-s { transform-origin: bottom center; animation: sway 3.5s ease-in-out infinite 0.5s; }
+    .firefly { animation: twinkle 2s ease-in-out infinite; }
+    .ff1 { animation-delay: 0s; }
+    .ff2 { animation-delay: 0.4s; }
+    .ff3 { animation-delay: 0.8s; }
+    .ff4 { animation-delay: 1.2s; }
+    .ff5 { animation-delay: 1.6s; }
+    .leaf { animation: float 3s ease-in-out infinite; }
   </style>
   
-  <!-- Sky (pixel blocks) -->
-  <rect width="320" height="160" fill="#0a0a1a"/>
+  <!-- Sky gradient (dusk forest) -->
+  <rect width="320" height="160" fill="#1a2f1a"/>
   
-  <!-- Pixel stars -->
-  <g>
-    <rect class="star s" x="12" y="10" width="2" height="2"/>
-    <rect class="star s2" x="35" y="22" width="2" height="2"/>
-    <rect class="star s3" x="68" y="8" width="2" height="2"/>
-    <rect class="star s4" x="92" y="18" width="2" height="2"/>
-    <rect class="star s5" x="125" y="5" width="2" height="2"/>
-    <rect class="star s6" x="158" y="15" width="2" height="2"/>
-    <rect class="star s7" x="192" y="8" width="2" height="2"/>
-    <rect class="star s8" x="225" y="22" width="2" height="2"/>
-    <rect class="star s" x="258" y="3" width="2" height="2"/>
-    <rect class="star s2" x="292" y="12" width="2" height="2"/>
-    <rect class="star s3" x="308" y="28" width="2" height="2"/>
-    <rect class="star s4" x="25" y="35" width="2" height="2"/>
-    <rect class="star s5" x="58" y="40" width="2" height="2"/>
-    <rect class="star s6" x="115" y="32" width="2" height="2"/>
-    <rect class="star s7" x="175" y="28" width="2" height="2"/>
-    <rect class="star s8" x="242" y="35" width="2" height="2"/>
-    <rect class="star s" x="282" y="40" width="2" height="2"/>
-    <rect class="star s2" x="8" y="50" width="2" height="2"/>
-    <rect class="star s3" x="105" y="45" width="2" height="2"/>
-    <rect class="star s4" x="208" y="42" width="2" height="2"/>
-    <rect class="star s5" x="275" y="48" width="2" height="2"/>
-  </g>
-  
-  <!-- Moon (pixelated) -->
-  <g class="glow">
-    <rect x="260" y="20" width="4" height="2" fill="#fff8e7"/>
-    <rect x="264" y="18" width="12" height="2" fill="#fff8e7"/>
-    <rect x="276" y="20" width="4" height="2" fill="#fff8e7"/>
-    <rect x="262" y="22" width="16" height="2" fill="#fff8e7"/>
-    <rect x="262" y="24" width="4" height="2" fill="#fff8e7"/>
-    <rect x="274" y="24" width="4" height="2" fill="#fff8e7"/>
-    <rect x="264" y="26" width="12" height="2" fill="#fff8e7"/>
-    <rect x="266" y="28" width="8" height="2" fill="#fff8e7"/>
-  </g>
-  
-  <!-- Aurora (pixelated bands) -->
-  <g class="aurora" opacity="0.4">
-    <rect x="0" y="45" width="320" height="4" fill="#00ff88"/>
-    <rect x="0" y="50" width="320" height="4" fill="#00ffcc"/>
-    <rect x="0" y="55" width="320" height="4" fill="#00ccff"/>
-    <rect x="0" y="60" width="320" height="4" fill="#8866ff"/>
-  </g>
-  
-  <!-- Far mountains (pixelated) -->
-  <g class="mt-far" fill="#2a1a4a">
-    <rect x="0" y="100" width="8" height="60"/>
-    <rect x="8" y="95" width="8" height="65"/>
-    <rect x="16" y="90" width="8" height="70"/>
-    <rect x="24" y="85" width="8" height="75"/>
-    <rect x="32" y="90" width="8" height="70"/>
-    <rect x="40" y="95" width="8" height="65"/>
-    <rect x="48" y="100" width="8" height="60"/>
+  <!-- Distant trees / forest silhouette -->
+  <g fill="#0d1f0d">
+    <rect x="0" y="60" width="8" height="100"/>
+    <rect x="8" y="50" width="8" height="110"/>
+    <rect x="16" y="40" width="8" height="120"/>
+    <rect x="24" y="55" width="8" height="105"/>
     
-    <rect x="80" y="95" width="8" height="65"/>
-    <rect x="88" y="88" width="8" height="72"/>
+    <rect x="50" y="45" width="8" height="115"/>
+    <rect x="58" y="35" width="8" height="125"/>
+    <rect x="66" y="50" width="8" height="110"/>
+    <rect x="74" y="60" width="8" height="100"/>
+    
+    <rect x="100" y="40" width="8" height="120"/>
+    <rect x="108" y="30" width="8" height="130"/>
+    <rect x="116" y="45" width="8" height="115"/>
+    <rect x="124" y="55" width="8" height="105"/>
+    
+    <rect x="150" y="50" width="8" height="110"/>
+    <rect x="158" y="38" width="8" height="122"/>
+    <rect x="166" y="48" width="8" height="112"/>
+    <rect x="174" y="58" width="8" height="102"/>
+    
+    <rect x="200" y="42" width="8" height="118"/>
+    <rect x="208" y="32" width="8" height="128"/>
+    <rect x="216" y="50" width="8" height="110"/>
+    <rect x="224" y="60" width="8" height="100"/>
+    
+    <rect x="250" y="48" width="8" height="112"/>
+    <rect x="258" y="35" width="8" height="125"/>
+    <rect x="266" y="52" width="8" height="108"/>
+    <rect x="274" y="62" width="8" height="98"/>
+    
+    <rect x="295" y="45" width="8" height="115"/>
+    <rect x="303" y="38" width="8" height="122"/>
+    <rect x="311" y="52" width="8" height="108"/>
+  </g>
+  
+  <!-- Mid trees (layer 2) -->
+  <g fill="#153015">
+    <rect x="20" y="80" width="8" height="80"/>
+    <rect x="28" y="70" width="8" height="90"/>
+    <rect x="36" y="85" width="8" height="75"/>
+    
+    <rect x="80" y="75" width="8" height="85"/>
+    <rect x="88" y="65" width="8" height="95"/>
     <rect x="96" y="80" width="8" height="80"/>
-    <rect x="104" y="72" width="8" height="88"/>
-    <rect x="112" y="80" width="8" height="80"/>
-    <rect x="120" y="88" width="8" height="72"/>
-    <rect x="128" y="95" width="8" height="65"/>
     
-    <rect x="160" y="90" width="8" height="70"/>
-    <rect x="168" y="82" width="8" height="78"/>
-    <rect x="176" y="74" width="8" height="86"/>
-    <rect x="184" y="66" width="8" height="94"/>
-    <rect x="192" y="74" width="8" height="86"/>
-    <rect x="200" y="82" width="8" height="78"/>
-    <rect x="208" y="90" width="8" height="70"/>
+    <rect x="140" y="78" width="8" height="82"/>
+    <rect x="148" y="68" width="8" height="92"/>
+    <rect x="156" y="82" width="8" height="78"/>
     
-    <rect x="240" y="95" width="8" height="65"/>
-    <rect x="248" y="85" width="8" height="75"/>
-    <rect x="256" y="78" width="8" height="82"/>
-    <rect x="264" y="72" width="8" height="88"/>
-    <rect x="272" y="78" width="8" height="82"/>
-    <rect x="280" y="85" width="8" height="75"/>
-    <rect x="288" y="92" width="8" height="68"/>
+    <rect x="190" y="72" width="8" height="88"/>
+    <rect x="198" y="62" width="8" height="98"/>
+    <rect x="206" y="76" width="8" height="84"/>
     
-    <rect x="305" y="98" width="8" height="62"/>
+    <rect x="240" y="80" width="8" height="80"/>
+    <rect x="248" y="70" width="8" height="90"/>
+    <rect x="256" y="84" width="8" height="76"/>
+    
+    <rect x="285" y="75" width="8" height="85"/>
+    <rect x="293" y="65" width="8" height="95"/>
+  </g>
+  
+  <!-- Near trees (layer 3) -->
+  <g fill="#1f4020">
+    <rect x="0" y="100" width="8" height="60"/>
+    <rect x="8" y="90" width="8" height="70"/>
+    <rect x="16" y="105" width="8" height="55"/>
+    
+    <rect x="45" y="95" width="8" height="65"/>
+    <rect x="53" y="85" width="8" height="75"/>
+    <rect x="61" y="100" width="8" height="60"/>
+    
+    <rect x="115" y="92" width="8" height="68"/>
+    <rect x="123" y="82" width="8" height="78"/>
+    <rect x="131" y="98" width="8" height="62"/>
+    
+    <rect x="175" y="88" width="8" height="72"/>
+    <rect x="183" y="78" width="8" height="82"/>
+    <rect x="191" y="95" width="8" height="65"/>
+    
+    <rect x="225" y="94" width="8" height="66"/>
+    <rect x="233" y="84" width="8" height="76"/>
+    <rect x="241" y="100" width="8" height="60"/>
+    
+    <rect x="270" y="90" width="8" height="70"/>
+    <rect x="278" y="80" width="8" height="80"/>
+    <rect x="286" y="96" width="8" height="64"/>
+    
+    <rect x="305" y="100" width="8" height="60"/>
     <rect x="313" y="92" width="8" height="68"/>
   </g>
   
-  <!-- Mid mountains -->
-  <g class="mt-mid" fill="#1a0f2a">
-    <rect x="0" y="115" width="8" height="45"/>
-    <rect x="8" y="110" width="8" height="50"/>
-    <rect x="16" y="105" width="8" height="55"/>
-    <rect x="24" y="100" width="8" height="60"/>
-    <rect x="32" y="105" width="8" height="55"/>
-    <rect x="40" y="110" width="8" height="50"/>
-    
-    <rect x="70" y="108" width="8" height="52"/>
-    <rect x="78" y="100" width="8" height="60"/>
-    <rect x="86" y="92" width="8" height="68"/>
-    <rect x="94" y="85" width="8" height="75"/>
-    <rect x="102" y="92" width="8" height="68"/>
-    <rect x="110" y="100" width="8" height="60"/>
-    <rect x="118" y="108" width="8" height="52"/>
-    
-    <rect x="150" y="105" width="8" height="55"/>
-    <rect x="158" y="96" width="8" height="64"/>
-    <rect x="166" y="88" width="8" height="72"/>
-    <rect x="174" y="80" width="8" height="80"/>
-    <rect x="182" y="88" width="8" height="72"/>
-    <rect x="190" y="96" width="8" height="64"/>
-    <rect x="198" y="105" width="8" height="55"/>
-    
-    <rect x="230" y="110" width="8" height="50"/>
-    <rect x="238" y="102" width="8" height="58"/>
-    <rect x="246" y="95" width="8" height="65"/>
-    <rect x="254" y="88" width="8" height="72"/>
-    <rect x="262" y="95" width="8" height="65"/>
-    <rect x="270" y="102" width="8" height="58"/>
-    <rect x="278" y="110" width="8" height="50"/>
-    
-    <rect x="305" y="115" width="8" height="45"/>
-    <rect x="313" y="108" width="8" height="52"/>
+  <!-- Tree trunks -->
+  <g fill="#3d2817">
+    <rect x="14" y="140" width="4" height="20"/>
+    <rect x="29" y="145" width="4" height="15"/>
+    <rect x="50" y="138" width="4" height="22"/>
+    <rect x="86" y="142" width="4" height="18"/>
+    <rect x="125" y="140" width="4" height="20"/>
+    <rect x="150" y="144" width="4" height="16"/>
+    <rect x="185" y="138" width="4" height="22"/>
+    <rect x="198" y="145" width="4" height="15"/>
+    <rect x="232" y="140" width="4" height="20"/>
+    <rect x="275" y="142" width="4" height="18"/>
+    <rect x="290" y="146" width="4" height="14"/>
   </g>
   
-  <!-- Near mountains -->
-  <g class="mt-near" fill="#10082a">
-    <rect x="0" y="130" width="8" height="30"/>
-    <rect x="8" y="125" width="8" height="35"/>
-    <rect x="16" y="120" width="8" height="40"/>
-    <rect x="24" y="125" width="8" height="35"/>
-    <rect x="32" y="130" width="8" height="30"/>
-    
-    <rect x="60" y="128" width="8" height="32"/>
-    <rect x="68" y="120" width="8" height="40"/>
-    <rect x="76" y="112" width="8" height="48"/>
-    <rect x="84" y="118" width="8" height="42"/>
-    <rect x="92" y="125" width="8" height="35"/>
-    <rect x="100" y="130" width="8" height="30"/>
-    
-    <rect x="130" y="125" width="8" height="35"/>
-    <rect x="138" y="115" width="8" height="45"/>
-    <rect x="146" y="105" width="8" height="55"/>
-    <rect x="154" y="112" width="8" height="48"/>
-    <rect x="162" y="120" width="8" height="40"/>
-    <rect x="170" y="128" width="8" height="32"/>
-    
-    <rect x="200" y="130" width="8" height="30"/>
-    <rect x="208" y="122" width="8" height="38"/>
-    <rect x="216" y="115" width="8" height="45"/>
-    <rect x="224" y="122" width="8" height="38"/>
-    <rect x="232" y="128" width="8" height="32"/>
-    
-    <rect x="260" y="125" width="8" height="35"/>
-    <rect x="268" y="118" width="8" height="42"/>
-    <rect x="276" y="112" width="8" height="48"/>
-    <rect x="284" y="118" width="8" height="42"/>
-    <rect x="292" y="125" width="8" height="35"/>
-    
-    <rect x="310" y="130" width="8" height="30"/>
+  <!-- Ground layer -->
+  <rect x="0" y="152" width="320" height="8" fill="#2d1f0f"/>
+  <rect x="0" y="150" width="320" height="2" fill="#3d5c2d"/>
+  
+  <!-- Grass tufts -->
+  <g fill="#4a7c3a">
+    <rect x="10" y="150" width="2" height="4"/>
+    <rect x="14" y="150" width="2" height="3"/>
+    <rect x="35" y="150" width="2" height="4"/>
+    <rect x="40" y="150" width="2" height="3"/>
+    <rect x="70" y="150" width="2" height="4"/>
+    <rect x="75" y="150" width="2" height="3"/>
+    <rect x="105" y="150" width="2" height="4"/>
+    <rect x="110" y="150" width="2" height="3"/>
+    <rect x="140" y="150" width="2" height="4"/>
+    <rect x="145" y="150" width="2" height="3"/>
+    <rect x="170" y="150" width="2" height="4"/>
+    <rect x="175" y="150" width="2" height="3"/>
+    <rect x="210" y="150" width="2" height="4"/>
+    <rect x="215" y="150" width="2" height="3"/>
+    <rect x="250" y="150" width="2" height="4"/>
+    <rect x="255" y="150" width="2" height="3"/>
+    <rect x="285" y="150" width="2" height="4"/>
+    <rect x="290" y="150" width="2" height="3"/>
   </g>
   
-  <!-- Trees (pixelated) -->
-  <g fill="#080518">
-    <rect x="15" y="142" width="4" height="18"/>
-    <rect x="11" y="138" width="4" height="6"/>
-    <rect x="17" y="135" width="4" height="8"/>
+  <!-- Mushrooms -->
+  <g>
+    <!-- Red mushroom with white spots -->
+    <rect x="60" y="148" width="2" height="4" fill="#e8dcc8"/>
+    <rect x="58" y="146" width="6" height="2" fill="#c41e3a"/>
+    <rect x="58" y="146" width="2" height="2" fill="#ffffff"/>
+    <rect x="62" y="146" width="2" height="2" fill="#ffffff"/>
     
-    <rect x="30" y="145" width="4" height="15"/>
-    <rect x="26" y="140" width="4" height="6"/>
+    <!-- Small brown mushroom -->
+    <rect x="180" y="149" width="2" height="3" fill="#c4a882"/>
+    <rect x="178" y="148" width="6" height="2" fill="#6b4423"/>
     
-    <rect x="288" y="140" width="4" height="20"/>
-    <rect x="284" y="136" width="4" height="6"/>
-    <rect x="290" y="132" width="4" height="8"/>
-    <rect x="296" y="136" width="4" height="6"/>
-    
-    <rect x="302" y="145" width="4" height="15"/>
-    <rect x="298" y="140" width="4" height="6"/>
-    <rect x="306" y="142" width="4" height="4"/>
+    <!-- Tiny mushroom -->
+    <rect x="265" y="150" width="1" height="2" fill="#e8dcc8"/>
+    <rect x="264" y="149" width="3" height="1" fill="#8b5a2b"/>
   </g>
   
-  <!-- Ground (pixelated) -->
-  <rect x="0" y="152" width="320" height="8" fill="#080518"/>
-  <rect x="0" y="150" width="320" height="2" fill="#1a0f2a"/>
-  
-  <!-- Shooting stars -->
-  <g class="shooting" style="animation-delay: 2s;">
-    <rect x="100" y="30" width="12" height="2" fill="#fff8e7"/>
+  <!-- Fireflies -->
+  <g class="firefly ff1">
+    <rect x="45" y="100" width="2" height="2" fill="#ffff88"/>
   </g>
-  <g class="shooting" style="animation-delay: 7s;">
-    <rect x="60" y="40" width="10" height="2" fill="#c9a227"/>
+  <g class="firefly ff2">
+    <rect x="120" y="95" width="2" height="2" fill="#88ff88"/>
+  </g>
+  <g class="firefly ff3">
+    <rect x="200" y="105" width="2" height="2" fill="#ffff88"/>
+  </g>
+  <g class="firefly ff4">
+    <rect x="160" y="90" width="2" height="2" fill="#88ffff"/>
+  </g>
+  <g class="firefly ff5">
+    <rect x="280" y="98" width="2" height="2" fill="#ffff88"/>
+  </g>
+  
+  <!-- Falling leaves -->
+  <g class="leaf" fill="#8b5e3c" opacity="0.7">
+    <rect x="80" y="120" width="3" height="2"/>
+  </g>
+  <g class="leaf" fill="#c4a060" opacity="0.6" style="animation-delay: 1s;">
+    <rect x="180" y="115" width="3" height="2"/>
+  </g>
+  <g class="leaf" fill="#7a9f5a" opacity="0.7" style="animation-delay: 2s;">
+    <rect x="250" y="118" width="3" height="2"/>
   </g>
 </svg>
