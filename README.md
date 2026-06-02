@@ -11,7 +11,7 @@
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Blog-ato--z.dev-58A6FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Blog" /> <img src="https://img.shields.io/badge/Email-az.f0810%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="https://ato-z.dev"><img src="https://img.shields.io/badge/Blog-ato--z.dev-58A6FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Blog" /></a> <img src="https://img.shields.io/badge/Email-az.f0810%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </div>
 
 <!-- 右侧小图 -->
