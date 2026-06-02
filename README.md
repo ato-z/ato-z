@@ -15,9 +15,6 @@
   <img src="https://img.shields.io/badge/Blog-ato--z.dev-58A6FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Blog" /> <img src="https://img.shields.io/badge/Email-az.f0810%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </div>
 
-<!-- 右侧小图 -->
-<img align="right" src="./profile/landscape.svg" width="200" />
-
 ```bash
 $ whoami
 Full-stack developer, open-source enthusiast.
@@ -30,6 +27,8 @@ $ current_focus
 $ stack
 React / Next.js / Vue / TypeScript / NestJS / Koa / TailwindCSS / Cloudflare
 ```
+
+<img align="right" src="./profile/landscape.svg" width="160" />
 
 | My GitHub Stats 📈 |
 |:---|
