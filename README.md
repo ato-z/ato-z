@@ -15,7 +15,7 @@
 </div>
 
 <!-- 右侧小图 -->
-<img align="right" src="./profile/landscape.svg" width="220" />
+<img align="right" src="./profile/landscape.png" width="220" />
 
 ```bash
 $ whoami
